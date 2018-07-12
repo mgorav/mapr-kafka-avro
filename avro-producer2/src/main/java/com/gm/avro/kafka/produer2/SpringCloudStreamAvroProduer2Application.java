@@ -38,7 +38,7 @@ public class SpringCloudStreamAvroProduer2Application {
     }
 
     @RequestMapping(value = "/persons", method = POST)
-    public String sendMessage() {
+    public String createDefaultPerson() {
         source.output().send(MessageBuilder.withPayload(aPerson()).build());
         return "CREATED: Person with verson v2.0 payload!";
     }
@@ -54,7 +54,7 @@ public class SpringCloudStreamAvroProduer2Application {
     }
 
     @RequestMapping(value = "/person", method = POST)
-    public String sendMessageX(@RequestParam(value = "id") String id, @RequestParam(value = "firstname") String firstname,
+    public String createSpecificPerson(@RequestParam(value = "id") String id, @RequestParam(value = "firstname") String firstname,
                                @RequestParam(value = "lastname") String lastname,
                                @RequestParam(value = "age") Integer age, @RequestParam(value = "married") Boolean married) {
 
