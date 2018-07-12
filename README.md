@@ -1,4 +1,4 @@
-## Schema Evolution Using Spring Cloud Stream + MapR Kafka
+## Schema Evolution Using Spring Cloud Stream + Avro +  MapR Kafka
 
 This project demonstrates schema evolution using following projects:
 
