@@ -40,15 +40,6 @@ public class SpringCloudStreamKafkaProducer {
         return "CREATED: Person with verson v1.0 payload!";
     }
 
-    private Person aPerson() {
-        Person person = new Person();
-        person.setId(UUID.randomUUID().toString() + "-v1.0");
-        person.setName("Name" + cnt.getAndIncrement());
-        person.setAge(20 + cnt.getAndIncrement());
-        person.setMarried(false);
-        return person;
-    }
-
     @RequestMapping(value = "/person", method = POST)
     public String createSpecificPerson(@RequestParam(value = "id") String id, @RequestParam(value = "name") String name,
                                @RequestParam(value = "age") Integer age, @RequestParam(value = "married") Boolean married) {
@@ -62,4 +53,15 @@ public class SpringCloudStreamKafkaProducer {
         source.output().send(MessageBuilder.withPayload(person).build());
         return "CREATED: Person with version = v1.0 payload!";
     }
+
+    //~~~ private methods
+    private Person aPerson() {
+        Person person = new Person();
+        person.setId(UUID.randomUUID().toString() + "-v1.0");
+        person.setName("Name" + cnt.getAndIncrement());
+        person.setAge(20 + cnt.getAndIncrement());
+        person.setMarried(false);
+        return person;
+    }
+
 }
