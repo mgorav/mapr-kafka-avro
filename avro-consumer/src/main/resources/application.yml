@@ -1,0 +1,14 @@
+spring:
+  kafka:
+    bootstrap-servers: maprdemo:9092
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: sensor-topic
+      schema-registry-client:
+        endpoint: http://localhost:3333
+      schema:
+        avro:
+          schema-locations: classpath:avro/person.avsc
+server.port: 6666

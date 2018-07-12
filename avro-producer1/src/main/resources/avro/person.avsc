@@ -1,0 +1,12 @@
+{
+  "namespace" : "com.gm.message",
+  "type" : "record",
+  "name" : "Person",
+  "fields" : [
+    {"name":"id","type":"string"},
+    {"name":"name","type":"string"},
+    {"name":"age", "type":"int"},
+    {"name":"sex", "type":"int"},
+    {"name":"married","type":"boolean","default":false}
+  ]
+}
