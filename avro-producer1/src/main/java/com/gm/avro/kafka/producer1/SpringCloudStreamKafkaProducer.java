@@ -35,7 +35,7 @@ public class SpringCloudStreamKafkaProducer {
     }
 
     @RequestMapping(value = "/persons", method = POST)
-    public String sendMessage() {
+    public String createDefaultPerson() {
         source.output().send(MessageBuilder.withPayload(aPerson()).build());
         return "CREATED: Person with verson v1.0 payload!";
     }
@@ -50,7 +50,7 @@ public class SpringCloudStreamKafkaProducer {
     }
 
     @RequestMapping(value = "/person", method = POST)
-    public String sendMessageX(@RequestParam(value = "id") String id, @RequestParam(value = "name") String name,
+    public String createSpecificPerson(@RequestParam(value = "id") String id, @RequestParam(value = "name") String name,
                                @RequestParam(value = "age") Integer age, @RequestParam(value = "married") Boolean married) {
 
         Person person = new Person();
