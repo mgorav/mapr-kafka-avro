@@ -43,15 +43,6 @@ public class SpringCloudStreamAvroProduer2Application {
         return "CREATED: Person with verson v2.0 payload!";
     }
 
-    private Person aPerson() {
-        Person person = new Person();
-        person.setId(UUID.randomUUID().toString() + "-v2.0");
-        person.setFirstname("Name" + cnt.getAndIncrement());
-        person.setLastname("LastName" + cnt.getAndIncrement());
-        person.setAge(20 + cnt.getAndIncrement());
-        person.setMarried(cnt.intValue() % 2 == 0 ? true : false);
-        return person;
-    }
 
     @RequestMapping(value = "/person", method = POST)
     public String createSpecificPerson(@RequestParam(value = "id") String id, @RequestParam(value = "firstname") String firstname,
@@ -67,5 +58,17 @@ public class SpringCloudStreamAvroProduer2Application {
 
         source.output().send(MessageBuilder.withPayload(person).build());
         return "CREATED: Person with version = v2.0 payload!";
+    }
+
+
+    //~~~ private methods
+    private Person aPerson() {
+        Person person = new Person();
+        person.setId(UUID.randomUUID().toString() + "-v2.0");
+        person.setFirstname("Name" + cnt.getAndIncrement());
+        person.setLastname("LastName" + cnt.getAndIncrement());
+        person.setAge(20 + cnt.getAndIncrement());
+        person.setMarried(cnt.intValue() % 2 == 0 ? true : false);
+        return person;
     }
 }
