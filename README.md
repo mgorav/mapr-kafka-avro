@@ -19,6 +19,24 @@ This project demonstrates schema evolution using following projects:
 4. **avro-consumer:** A consumer which resilient to _**Person**_ schema changes
 
 
+## Merits Of Using Avro For Schema Evolution
+
+1. It has a direct mapping to and from JSON
+2. It has a very compact format. The bulk of JSON, repeating every field name with every single record, is what makes JSON inefficient for high-volume usage.
+3. It is very fast.
+4. It has great bindings for a wide variety of programming languages so you can generate Java objects that make working with event data easier, but it does not require code generation so tools can be written generically for any data stream.
+5. It has a rich, extensible schema language defined in pure JSON
+6. It has the best notion of compatibility for evolving your data over time.
+
+## Why Schema?
+
+1. Robustness
+2. Clarity and Semantics
+3. Compatibility
+4. Schemas are a Conversation
+5. Schemas Eliminate The Manual Labor of Data Science
+
+
 ## Pre-requisite
 
 The project uses MapR sanbox. To install MapR following steps specified in project - [SpringBootMapR](https://github.com/mgorav/SpringBootMapR)
