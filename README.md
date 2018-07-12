@@ -16,6 +16,12 @@ This project demonstrates schema evolution using following projects:
       _**name**_ is split into two parts:
       - firstname (Person(v2.0).firstname = Person(v1.0).name)
       - lastname
+      
+ ```
+  For making things self explainable, above producer will append v1.0 or v2.0. This will helps in visualizing
+  schema changes and conumer is not affected
+ ```     
+
 4. **avro-consumer:** A consumer which resilient to _**Person**_ schema changes
 
 
