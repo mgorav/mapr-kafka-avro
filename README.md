@@ -22,9 +22,9 @@ This project demonstrates schema evolution using following projects:
   schema changes and conumer is not affected
  ```   
  
-  ![alt text](MapRKafkaAvro.jpeg) 
-
 4. **avro-consumer:** A consumer which resilient to _**Person**_ schema changes
+
+ ![alt text](MapRKafkaAvro.jpeg) 
 
 
 ## Merits Of Using Avro For Schema Evolution
