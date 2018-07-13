@@ -22,7 +22,7 @@ This project demonstrates schema evolution using following projects:
   schema changes and conumer is not affected
  ```   
  
-4. **avro-consumer:** A consumer which resilient to _**Person**_ schema changes
+4. **avro-consumer:** A consumer which is resilient to _**Person**_ schema changes
 
  ![alt text](MapRKafkaAvro.jpg) 
 
