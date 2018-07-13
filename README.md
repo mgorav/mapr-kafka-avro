@@ -61,7 +61,7 @@ This project demonstrates schema evolution using following projects:
 
 ## Pre-requisite
 
-The project uses MapR sanbox. To install MapR following steps specified in project - [SpringBootMapR](https://github.com/mgorav/SpringBootMapR)
+The project uses MapR sanbox. To install MapR follow steps specified in project - [SpringBootMapR](https://github.com/mgorav/SpringBootMapR)
 
 To install MapR Kafka by issuing following commands in the MapR sandbox:
 
