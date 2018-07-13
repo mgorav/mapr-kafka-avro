@@ -16,7 +16,7 @@ So, I started exploring how can I build MapR Kafka producer/consumer which is re
 
 This project demonstrates schema evolution using following projects:
 
-1. **schema-registry:** Spring Cloud Stream based avro schema registry
+1. **schema-registry:** Spring Boot style Avro schema registry using Spring Cloud Stream
 2. **avro-producer1:** Spring Boot micro-service build using Spring Cloud Stream which creates a _**Person**_ and 
    writes to MapR Kafka Topic using version - v1.0 of _**Person**_ schema
    The Person schema contain following attributes:
