@@ -24,7 +24,7 @@ This project demonstrates schema evolution using following projects:
  
 4. **avro-consumer:** A consumer which resilient to _**Person**_ schema changes
 
- ![alt text](MapRKafkaAvro.jpeg) 
+ ![alt text](MapRKafkaAvro.jpg) 
 
 
 ## Merits Of Using Avro For Schema Evolution
