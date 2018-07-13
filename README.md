@@ -1,7 +1,7 @@
 ## Schema Evolution Using Spring Cloud Stream + Avro +  MapR Kafka
 
 
-Service/Producer/Consumer Schema evolution is always challenging. As an architect/developer, I would like to design my service/consumer to be resilient to differing payload schemas.
+Service/Producer/Consumer Schema evolution is always challenging. As an architect/developer, I would like to design my service/producer/consumer to be resilient to differing payload schemas.
 
 This problem is becoming more acute in the world of Big Data. Let's explore this problem further. MapR provides great support for building Data Lake. One of the corner stone in building data lake is the "data ingestion". It's always quest of a Data Engineer/developer to build resilient services/data pipe line which can withstand schema changes. But the question is how? 
 
